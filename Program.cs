@@ -10,7 +10,8 @@ namespace BancoThinkLab1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("HOLA ");
+            Console.WriteLine("HOLA MUNDO");
+
         }
     }
 }
