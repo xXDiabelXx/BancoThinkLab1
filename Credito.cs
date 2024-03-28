@@ -18,6 +18,34 @@ namespace BancoThinkLab1
         public double MontoCredito { get; set; }
         public int CantidadCuotas { get; set; }
 
+        public Credito() 
+        {
+            this.Sueldo = 100000;
+            this.MontoCredito = 100000;
+            this.CantidadCuotas = 10;
+        }
+        public double calculaCredito() 
+        {
+            double maximoCredito = this.Sueldo * 1.5;
+            float interesMensual = 0;
+            double totalCredito = 0;
 
+            if(maximoCredito >= this.MontoCredito) 
+            {
+                if(this.CantidadCuotas > 48) 
+                {
+                    interesMensual = 3f / 12f;
+                   
+                    //3%
+                }else 
+                {
+                    interesMensual = 1.85f / 12f;
+                    
+                    //1.85%
+                }
+                totalCredito = this.MontoCredito * interesMensual * this.CantidadCuotas;
+            }
+            return Math.Round(totalCredito);
+        }
     }
 }

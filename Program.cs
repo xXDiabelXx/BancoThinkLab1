@@ -10,7 +10,13 @@ namespace BancoThinkLab1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("HOLA MUNDO");
+            Console.WriteLine("Programa Inicializado");
+            Credito c1= new Credito();
+            Console.WriteLine(c1.calculaCredito());
+            
+            Console.WriteLine("El total del credito va ser : " +  c1.calculaCredito() );
+            Console.WriteLine("Valor mensual : " + (c1.calculaCredito() / c1.CantidadCuotas));
+
 
         }
     }
